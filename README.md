@@ -1,4 +1,4 @@
-# Azure NVA Routing and East-West Traffic Inspection Lab
+# Azure NVA Routing and Traffic Inspection Lab
 
 ## Overview
 
