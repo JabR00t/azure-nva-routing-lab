@@ -38,6 +38,52 @@ The NVA uses the private IP address:
 ```text
 10.30.5.4
 ```
+## Architecture Diagram
+
+```mermaid
+flowchart TB
+    Internet((Internet))
+
+    subgraph AzureVNet["Azure VNet — 10.30.0.0/16"]
+        subgraph FirewallSubnet["Firewall Subnet — 10.30.5.0/24"]
+            NVA["Linux NVA / Firewall<br/>10.30.5.4"]
+        end
+
+        subgraph WebSubnet["Web Subnet — 10.30.10.0/24"]
+            WebVM["Web VM<br/>10.30.10.4"]
+        end
+
+        subgraph AppSubnet["Application Subnet — 10.30.20.0/24"]
+            AppVM["Windows Application VM<br/>10.30.20.4<br/>TCP 8443"]
+        end
+
+        subgraph DataSubnet["Data Subnet — 10.30.30.0/24"]
+            DataVM["Data VM<br/>10.30.30.4<br/>TCP 1433"]
+        end
+    end
+
+    Internet <--> NVA
+
+    WebVM -->|"Allowed: TCP 8443"| NVA
+    NVA --> AppVM
+
+    AppVM -->|"Allowed: TCP 1433"| NVA
+    NVA --> DataVM
+
+    WebVM -.->|"Denied and logged"| NVA
+    NVA -.-> DataVM
+```
+
+### Traffic Flow
+
+```text
+Web VM → NVA → Application VM
+Application VM → NVA → Data VM
+Web VM → NVA → Data VM — Denied
+```
+
+User-defined routes ensure that both request and response traffic pass through the NVA.
+
 
 ## Traffic Policy
 
