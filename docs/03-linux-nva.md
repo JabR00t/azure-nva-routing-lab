@@ -176,29 +176,6 @@ Confirm that:
 * Linux IP forwarding equals `1`
 * Azure NIC IP forwarding equals `True`
 
-## 7. Evidence
-
-Capture screenshots showing:
-
-1. The `vm-nva` overview
-2. The network interface private IP `10.30.5.4`
-3. Azure NIC IP forwarding enabled
-4. The Run Command result showing `net.ipv4.ip_forward = 1`
-
-Save the screenshots under:
-
-```text
-images/nva-deployment/
-```
-
-Hide or crop sensitive values such as:
-
-* Subscription IDs
-* Tenant IDs
-* SSH public keys
-* Public IP addresses
-* Administrative usernames
-
 ## Expected Result
 
 At the end of this stage:

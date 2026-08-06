@@ -95,22 +95,6 @@ Also verify the virtual network address space:
 10.30.0.0/16
 ```
 
-## 5. Evidence
-
-Capture screenshots showing:
-
-1. The virtual network overview
-2. The `10.30.0.0/16` address space
-3. The four configured subnets
-
-Save the screenshots under:
-
-```text
-images/network-foundation/
-```
-
-Do not include subscription IDs, tenant IDs, usernames, public IP addresses, or other sensitive information in screenshots.
-
 ## Expected Result
 
 At the end of this stage, the Azure environment should contain:
