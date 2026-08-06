@@ -8,6 +8,11 @@ The NVA is a Linux virtual machine configured to perform routing, firewall inspe
 
 The lab uses Azure User-Defined Routes to override Azure's default system routes and force traffic between the web, application, and data subnets through the NVA.
 
+## Documentation
+
+1. [Prerequisites and Resource Plan](docs/01-prerequisites.md)
+2. [Network Foundation](docs/02-network-foundation.md)
+
 ## Objectives
 
 The main objectives of this lab were to:
