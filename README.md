@@ -17,6 +17,8 @@ The lab uses Azure User-Defined Routes to override Azure's default system routes
 5. [Windows Test Listeners](docs/05-windows-listeners.md)
 6. [Linux NVA Firewall](docs/06-linux-nva-firewall.md)
 7. [User-Defined Routes](docs/07-user-defined-routes.md)
+8. [Routing and Firewall Validation](docs/08-validation.md)
+9. [Project Cleanup](docs/09-cleanup.md)
 
 ## Objectives
 
