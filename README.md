@@ -12,6 +12,7 @@ The lab uses Azure User-Defined Routes to override Azure's default system routes
 
 1. [Prerequisites and Resource Plan](docs/01-prerequisites.md)
 2. [Network Foundation](docs/02-network-foundation.md)
+3. [Linux NVA Deployment](docs/03-linux-nva.md)
 
 ## Objectives
 
